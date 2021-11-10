@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="default" template="/layout/default.jsp">
+		<put-attribute name="title" value="User Management Aplication" />
+		<put-attribute name="header" value="/layout/list.jsp" />
+		<put-attribute name="body" value="/layout/body.jsp" />
+	</definition>
+
+	<definition name="homePage" extends="default">
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="listUser" extends="default">
+		<put-attribute name="body" value="/views/bodyList.jsp" />
+	</definition>
+	
+	<definition name="addUser" extends="default">
+	<put-attribute name="header" value="/layout/headerUser.jsp" />
+		<put-attribute name="body" value="/views/addUser.jsp" />
+	</definition>
+
+</tiles-definitions>
